@@ -15,7 +15,7 @@ OpenCode loads skills from the configured skills directory and instructions from
 ```bash
 mkdir -p ~/.config/opencode/skills/proveit
 cp skills/proveit/SKILL.md ~/.config/opencode/skills/proveit/SKILL.md
-npx proveit prompt --write AGENTS.md
+npx github:Charcraft/proveit prompt --write AGENTS.md
 ```
 
 If you prefer a project-local install, use `.opencode/skills/proveit/SKILL.md` and commit it.
@@ -35,7 +35,7 @@ Add to `opencode.json` if you keep instructions outside `AGENTS.md`:
 ```bash
 mkdir -p .claude/skills/proveit
 cp skills/proveit/SKILL.md .claude/skills/proveit/SKILL.md
-npx proveit prompt --write CLAUDE.md
+npx github:Charcraft/proveit prompt --write CLAUDE.md
 ```
 
 Claude Code reads `CLAUDE.md` as project memory and skills from `.claude/skills/`.
@@ -48,7 +48,7 @@ Cursor uses project rules in `.cursor/rules/*.mdc`.
 
 ```bash
 mkdir -p .cursor/rules
-npx proveit prompt --write .cursor/rules/proveit.mdc
+npx github:Charcraft/proveit prompt --write .cursor/rules/proveit.mdc
 ```
 
 Add frontmatter if your Cursor version requires it:
@@ -67,13 +67,13 @@ alwaysApply: true
 Most agents accept a repository instruction file. Generate the contract and append it:
 
 ```bash
-npx proveit prompt --write AGENTS.md
+npx github:Charcraft/proveit prompt --write AGENTS.md
 ```
 
 If the agent only accepts a system prompt, print the block and paste it:
 
 ```bash
-npx proveit prompt
+npx github:Charcraft/proveit prompt
 ```
 
 ---
@@ -84,14 +84,14 @@ Fail a pull request when an agent-generated document contains an unverified limi
 
 ```yaml
 - name: Gate agent claims
-  run: npx proveit claims docs/agent-output.md
+  run: npx github:Charcraft/proveit claims docs/agent-output.md
 ```
 
 Run the probe on the runner to prove what CI can do:
 
 ```yaml
 - name: Capability attestation
-  run: npx proveit probe --save --offline
+  run: npx github:Charcraft/proveit probe --save --offline
 - uses: actions/upload-artifact@v4
   with:
     name: proveit-report
@@ -130,7 +130,7 @@ Example custom check shape:
 ```bash
 #!/usr/bin/env sh
 # .git/hooks/pre-commit
-npx proveit claims docs/*.md || exit 1
+npx github:Charcraft/proveit claims docs/*.md || exit 1
 ```
 
 Make it executable with `chmod +x .git/hooks/pre-commit`.

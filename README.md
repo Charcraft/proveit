@@ -12,7 +12,7 @@ non-destructive probe of what the agent can actually do, generates a contract yo
 machine"* unless they cite real evidence.
 
 ```text
-$ npx proveit probe --browser
+$ npx github:Charcraft/proveit probe --browser
 OK       shell              Execute a local process
 OK       filesystem.temp    Read and write files in temp
 OK       network.https      Make outbound HTTPS requests
@@ -81,13 +81,13 @@ Everything is local, read-only where possible, and dependency-free. Node 18+.
 
 ```bash
 # 1. Inspect the environment
-npx proveit probe --save --browser
+npx github:Charcraft/proveit probe --save --browser
 
 # 2. Install the contract into your agent instructions
-npx proveit prompt --write AGENTS.md
+npx github:Charcraft/proveit prompt --write AGENTS.md
 
 # 3. Gate an agent response or a transcript
-npx proveit claims response.md
+npx github:Charcraft/proveit claims response.md
 ```
 
 From source:
@@ -198,7 +198,7 @@ the contract from `AGENTS.md`:
 ```bash
 mkdir -p ~/.config/opencode/skills/proveit
 cp skills/proveit/SKILL.md ~/.config/opencode/skills/proveit/SKILL.md
-npx proveit prompt --write AGENTS.md
+npx github:Charcraft/proveit prompt --write AGENTS.md
 ```
 
 ### Claude Code
@@ -211,7 +211,7 @@ cp skills/proveit/SKILL.md .claude/skills/proveit/SKILL.md
 ### Cursor
 
 Add the generated contract to `.cursor/rules/proveit.mdc` (Project Rules), then tell the agent to
-run `npx proveit probe` when a limit is suspected.
+run `npx github:Charcraft/proveit probe` when a limit is suspected.
 
 ### Any agent
 

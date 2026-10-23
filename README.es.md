@@ -11,7 +11,7 @@ frases como *"estoy en un sandbox"* o *"no tengo acceso a tu máquina"* cuando n
 real.
 
 ```text
-$ npx proveit probe --browser
+$ npx github:Charcraft/proveit probe --browser
 OK       shell              Execute a local process
 OK       filesystem.temp    Read and write files in temp
 OK       network.https      Make outbound HTTPS requests
@@ -66,13 +66,13 @@ Todo es local, sin dependencias y con Node 18+.
 
 ```bash
 # 1. Inspecciona el entorno
-npx proveit probe --save --browser
+npx github:Charcraft/proveit probe --save --browser
 
 # 2. Instala el contrato en las instrucciones de tu agente
-npx proveit prompt --write AGENTS.md
+npx github:Charcraft/proveit prompt --write AGENTS.md
 
 # 3. Filtra una respuesta o un transcript
-npx proveit claims response.md
+npx github:Charcraft/proveit claims response.md
 ```
 
 Desde el código fuente:
@@ -144,7 +144,7 @@ silencian con `<!-- proveit-ignore -->` en la línea anterior.
 ```bash
 mkdir -p ~/.config/opencode/skills/proveit
 cp skills/proveit/SKILL.md ~/.config/opencode/skills/proveit/SKILL.md
-npx proveit prompt --write AGENTS.md
+npx github:Charcraft/proveit prompt --write AGENTS.md
 ```
 
 ### Claude Code
@@ -152,14 +152,14 @@ npx proveit prompt --write AGENTS.md
 ```bash
 mkdir -p .claude/skills/proveit
 cp skills/proveit/SKILL.md .claude/skills/proveit/SKILL.md
-npx proveit prompt --write CLAUDE.md
+npx github:Charcraft/proveit prompt --write CLAUDE.md
 ```
 
 ### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-npx proveit prompt --write .cursor/rules/proveit.mdc
+npx github:Charcraft/proveit prompt --write .cursor/rules/proveit.mdc
 ```
 
 ### Cualquier agente

@@ -21,7 +21,7 @@ Your self-model is not evidence. Run the probe before you assert a limit.
 1. **Probe.**
 
    ```bash
-   npx proveit probe --save --browser
+   npx github:Charcraft/proveit probe --save --browser
    ```
 
    Read `PROVEIT.md`. Treat `ok` as available.
@@ -29,7 +29,7 @@ Your self-model is not evidence. Run the probe before you assert a limit.
 2. **Install the contract** into the repository instructions once:
 
    ```bash
-   npx proveit prompt --write AGENTS.md
+   npx github:Charcraft/proveit prompt --write AGENTS.md
    ```
 
 3. **Test before denying.** If the check is `ok`, use the capability. If you still fail, quote the
@@ -44,7 +44,7 @@ Your self-model is not evidence. Run the probe before you assert a limit.
 5. **Gate the output** before delivering it:
 
    ```bash
-   npx proveit claims response.md
+   npx github:Charcraft/proveit claims response.md
    ```
 
 ## Hard rules
