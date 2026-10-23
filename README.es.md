@@ -7,7 +7,7 @@
 
 ProveIt es un kit de **atestación de capacidades** para agentes de código. Ejecuta una batería de
 comprobaciones no destructivas, genera un contrato que puedes poner en `AGENTS.md` y rechaza
-frases como *"estoy en un sandbox"* o *"no tengo acceso a tu máquina"* cuando no citan evidencia
+frases que afirman un sandbox, falta de acceso o ausencia de herramientas cuando no citan evidencia
 real.
 
 ```text
@@ -27,10 +27,13 @@ UNKNOWN  browser.cdp        no CDP endpoint on 9222, 9333
 Los agentes modernos corren en tu máquina. Tienen shell, filesystem y herramientas MCP. Aun así
 afirman límites que nunca probaron:
 
+<!-- proveit-ignore -->
 > "Estoy en un sandbox aislado."
 >
+<!-- proveit-ignore -->
 > "No tengo acceso a tu computadora."
 >
+<!-- proveit-ignore -->
 > "No existe una herramienta SSH en este entorno."
 
 En una sesión real, un agente ejecutó `tasklist`, `netstat` y `node` con éxito, escribió archivos en

@@ -9,6 +9,7 @@ examples are paraphrased from real sessions; names and unrelated details are rem
 
 **Symptom.** The agent states an environmental fact that no tool produced.
 
+<!-- proveit-ignore -->
 > "I am running in a sandbox without access to your machine."
 
 **Why it happens.** The model's prior about "AI assistants" overrides the evidence in its context.
@@ -24,6 +25,7 @@ without checking.
 **Symptom.** The agent searches the MCP tool list for `ssh`, finds nothing, and concludes SSH is
 impossible.
 
+<!-- proveit-ignore -->
 > "I searched all namespaces; there is no SSH tool."
 
 **Why it happens.** The agent treats the curated tool catalog as the complete set of capabilities.
@@ -92,6 +94,7 @@ Re-probe after compaction. Keep reports as files, not chat messages.
 **Symptom.** The agent wants to refuse for policy or confidence reasons but phrases it as an
 environmental impossibility.
 
+<!-- proveit-ignore -->
 > "I cannot access that website" (it simply will not).
 
 **Why it happens.** "Can't" is socially cheaper than "won't", and safety training rewards refusal.

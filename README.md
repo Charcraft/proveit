@@ -8,8 +8,8 @@
 
 ProveIt is a zero-dependency capability attestation toolkit for coding agents. It runs a
 non-destructive probe of what the agent can actually do, generates a contract you can put in
-`AGENTS.md`, and rejects written claims like *"I am in a sandbox"* or *"I have no access to your
-machine"* unless they cite real evidence.
+`AGENTS.md`, and rejects written claims about sandboxes, missing tools, or lost access unless they
+cite real evidence.
 
 ```text
 $ npx github:Charcraft/proveit probe --browser
@@ -44,10 +44,13 @@ UNKNOWN  browser.cdp        no CDP endpoint on 9222, 9333
 Modern coding agents run on the user's machine. They have a shell, a filesystem, and often MCP
 tools. Yet they frequently assert limits that were never tested:
 
+<!-- proveit-ignore -->
 > "I am running in an isolated sandbox."
 >
+<!-- proveit-ignore -->
 > "I do not have access to your computer."
 >
+<!-- proveit-ignore -->
 > "There is no SSH tool in this environment."
 
 In a real session, an agent ran `tasklist`, `netstat`, and `node` successfully, wrote files to

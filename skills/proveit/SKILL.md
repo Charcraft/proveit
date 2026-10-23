@@ -9,8 +9,8 @@ Your self-model is not evidence. Run the probe before you assert a limit.
 
 ## When to use this skill
 
-- You are about to write "I can't", "I don't have access", "I am in a sandbox", "there is no
-  shell/SSH/browser tool", or "you need to run this yourself".
+- You are about to write a sentence that denies access, denies a shell/SSH/browser tool, claims a
+  sandbox, or asks the user to run something yourself.
 - A task appears to require the user's machine, network, or filesystem.
 - You changed machines, containers, CI, or provider.
 - A previous tool call succeeded but you still feel "isolated". That gap is the failure mode this
@@ -61,6 +61,7 @@ Your self-model is not evidence. Run the probe before you assert a limit.
 
 Bad:
 
+<!-- proveit-ignore -->
 > I am in an isolated sandbox, so I cannot inspect your Chrome profile. Please run this yourself.
 
 Good:
