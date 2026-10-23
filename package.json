@@ -1,0 +1,47 @@
+{
+  "name": "proveit",
+  "version": "1.0.0",
+  "description": "Capability attestation for AI coding agents. Make your agent prove its limits instead of inventing them.",
+  "type": "module",
+  "bin": {
+    "proveit": "bin/proveit.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "probe": "node bin/proveit.mjs probe",
+    "claims": "node bin/proveit.mjs claims"
+  },
+  "keywords": [
+    "ai-agents",
+    "llm",
+    "agents",
+    "capability",
+    "sandbox",
+    "tool-use",
+    "opencode",
+    "claude-code",
+    "cursor",
+    "confabulation"
+  ],
+  "author": "Carlos Martinez Pineda (Charcraft)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skills",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charcraft/proveit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Charcraft/proveit/issues"
+  },
+  "homepage": "https://github.com/Charcraft/proveit#readme"
+}
